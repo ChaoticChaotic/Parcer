@@ -1,0 +1,1 @@
+28-12 16:54:08 [WARN ] [parcer.reader.SiteReader]: - Некорректный формат адреса, перезапуск java.lang.IllegalArgumentException: Malformed URL: 6
