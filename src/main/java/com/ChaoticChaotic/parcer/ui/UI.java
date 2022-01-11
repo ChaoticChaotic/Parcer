@@ -1,17 +1,16 @@
 package com.ChaoticChaotic.parcer.ui;
 
+import com.ChaoticChaotic.parcer.wrappers.InputScanner;
 import com.ChaoticChaotic.parcer.langDetector.SupportedLanguages;
 import com.ChaoticChaotic.parcer.wordsDAO.WordsDAO;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.util.Scanner;
-
 @Component
 public class UI {
 
-    Scanner scanner = new Scanner(System.in);
+
     Logger LOGGER = Logger.getLogger(UI.class);
     private String url;
     private Integer command;
@@ -19,10 +18,13 @@ public class UI {
     @Autowired
     WordsDAO wordsDAO;
 
+    @Autowired
+    InputScanner scanner;
+
     public void getInput() {
         System.out.println("Вставьте URL адрес");
         LOGGER.info("Получение URL адресa");
-        url = scanner.nextLine();
+        url = scanner.getLine();
         if (getUrl().equals(" ") || getUrl().equals("") || getUrl() == null) {
             try {
                 throw new IllegalArgumentException("Пустой URL адрес");
@@ -54,8 +56,8 @@ public class UI {
                         "6. для завершения работы"
         );
         System.out.println();
-        command = Integer.valueOf(scanner.nextLine());
-        if (command < 0 || command > 6 || command == null) {
+        command = Integer.valueOf(scanner.getLine());
+        if (command <= 0 || command > 6 || command == null) {
             try {
                 throw new IllegalArgumentException("Неподходящий формат или отсутствующая команда");
             } catch (IllegalArgumentException e) {
@@ -68,21 +70,21 @@ public class UI {
     }
 
     public void commandHandler(Integer command) throws IllegalArgumentException {
-        if (command == 1){
+        if (getCommand() == 1){
             LOGGER.info("Запрос вывода всех позиций базы данных");
             System.out.println(wordsDAO.findAll());
         }
         else if (command == 2){
             System.out.println("введите слово для поиска");
             System.out.println();
-            String value = scanner.nextLine();
+            String value = scanner.getLine();
             LOGGER.info("Запрос вывода всех позиций базы данных по слову " + value);
             System.out.println(wordsDAO.findAllByValue(value));
         }
         else if (command == 3){
             System.out.println("введите url адрес");
             System.out.println();
-            String url = scanner.nextLine();
+            String url = scanner.getLine();
             LOGGER.info("Запрос вывода всех позиций базы данных по url " + url);
             System.out.println(wordsDAO.findAllByUrl(url));
         }
@@ -90,7 +92,7 @@ public class UI {
             LOGGER.info("Запрос вывода всех позиций базы данных по языку");
             System.out.println("введите язык для поиска: en, ru, el ?");
             System.out.println();
-            String lang = scanner.nextLine();
+            String lang = scanner.getLine();
             if (lang.equals(SupportedLanguages.RUSSIAN.getValue())){
                 LOGGER.info("Язык запроса: ru");
                 System.out.println(wordsDAO.findAllByLanguage(SupportedLanguages.RUSSIAN));
@@ -108,8 +110,7 @@ public class UI {
 
     }
 
-    public UI() {
-    }
+    public UI() {}
 
     public UI(String url) {
         this.url = url;

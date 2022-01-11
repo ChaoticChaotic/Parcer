@@ -54,6 +54,7 @@ public class UniqueWordsAnalizer {
                     word.setValue(s);
                     word.setRepeats(sortedString.get(s));
                     wordsDAO.addWord(word);
+                    System.out.println(word);
                 }
             }
             LOGGER.info("Загрузка статистики в базу данных завершена");

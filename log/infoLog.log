@@ -336,3 +336,51 @@
 28-12 17:53:19 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Получение URL адресa
 28-12 17:58:36 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Получение URL адресa
 28-12 18:16:41 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Получение URL адресa
+28-12 19:15:56 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Получение URL адресa
+28-12 19:16:16 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Получение URL адресa
+28-12 19:18:02 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Получение URL адресa
+28-12 19:19:24 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Получение URL адресa
+28-12 19:20:11 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Получение URL адресa
+28-12 19:20:29 [INFO ] [c.parcer.service.ParcerService]: - Начало работы
+28-12 19:20:29 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Получение URL адресa
+28-12 19:21:22 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Получение URL адресa
+28-12 19:22:01 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Получение URL адресa
+28-12 19:23:02 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Получение URL адресa
+28-12 19:24:37 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Получение URL адресa
+28-12 19:24:59 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Получение URL адресa
+28-12 19:28:15 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Получение URL адресa
+28-12 19:29:24 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Получение URL адресa
+28-12 19:29:48 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Получение URL адресa
+28-12 19:33:31 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Загрузка меню
+28-12 19:34:11 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Получение URL адресa
+28-12 19:34:27 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Загрузка меню
+28-12 19:37:05 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Загрузка меню
+30-12 12:20:18 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Загрузка меню
+30-12 12:20:56 [INFO ] [c.parcer.service.ParcerService]: - Начало работы
+30-12 12:20:56 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Получение URL адресa
+30-12 12:20:58 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Url адрес https://en.wikipedia.org/wiki/Parthenon
+30-12 12:21:00 [INFO ] [aotic.parcer.reader.SiteReader]: - Текст с сайта https://en.wikipedia.org/wiki/Parthenon прочитан
+30-12 12:21:00 [INFO ] [rcer.langDetector.LangDetector]: - Инициализация языка, язык сайта: en
+30-12 12:21:00 [INFO ] [c.parcer.service.ParcerService]: - Старт парсинга и подсчета статистики уникальных слов
+30-12 12:21:00 [INFO ] [.analizers.UniqueWordsAnalizer]: - Подсчет уникальных слов окончен
+30-12 12:21:00 [INFO ] [.analizers.UniqueWordsAnalizer]: - Загрузка статистики в базу данных
+30-12 12:21:01 [INFO ] [.analizers.UniqueWordsAnalizer]: - Загрузка статистики в базу данных завершена
+30-12 12:21:01 [INFO ] [c.parcer.service.ParcerService]: - Текст обработан
+30-12 12:21:01 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Загрузка меню
+06-01 14:37:23 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Получение URL адресa
+06-01 15:02:26 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Получение URL адресa
+06-01 15:03:23 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Получение URL адресa
+06-01 15:05:13 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Получение URL адресa
+06-01 15:07:09 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Получение URL адресa
+09-01 14:35:49 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Получение URL адресa
+09-01 14:36:30 [INFO ] [c.parcer.service.ParcerService]: - Начало работы
+09-01 14:36:30 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Получение URL адресa
+09-01 14:36:46 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Url адрес https://www.baeldung.com/java-heap-sort
+09-01 14:36:47 [INFO ] [aotic.parcer.reader.SiteReader]: - Текст с сайта https://www.baeldung.com/java-heap-sort прочитан
+09-01 14:36:47 [INFO ] [rcer.langDetector.LangDetector]: - Инициализация языка, язык сайта: en
+09-01 14:36:47 [INFO ] [c.parcer.service.ParcerService]: - Старт парсинга и подсчета статистики уникальных слов
+09-01 14:36:47 [INFO ] [.analizers.UniqueWordsAnalizer]: - Подсчет уникальных слов окончен
+09-01 14:36:47 [INFO ] [.analizers.UniqueWordsAnalizer]: - Загрузка статистики в базу данных
+09-01 14:36:47 [INFO ] [.analizers.UniqueWordsAnalizer]: - Загрузка статистики в базу данных завершена
+09-01 14:36:47 [INFO ] [c.parcer.service.ParcerService]: - Текст обработан
+09-01 14:36:47 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Загрузка меню
