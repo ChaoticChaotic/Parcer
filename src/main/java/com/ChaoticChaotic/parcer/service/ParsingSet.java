@@ -6,15 +6,17 @@ import com.ChaoticChaotic.parcer.analizers.GreekAnalizer;
 import com.ChaoticChaotic.parcer.analizers.RussianAnalizer;
 import com.ChaoticChaotic.parcer.langDetector.LangDetector;
 import com.ChaoticChaotic.parcer.langDetector.SupportedLanguages;
-import org.apache.log4j.Logger;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
+@Log4j @Getter @Setter
 class ParsingSet {
 
     String url;
-    Logger LOGGER = Logger.getLogger(ParcerService.class);
     @Autowired
     RussianAnalizer russianAnalizer;
     @Autowired
@@ -26,7 +28,7 @@ class ParsingSet {
 
     public void setParsing() throws IllegalArgumentException {
         String rawString = langDetector.getRawString();
-        LOGGER.info("Старт парсинга и подсчета статистики уникальных слов");
+        log.info("Старт парсинга и подсчета статистики уникальных слов");
         if (langDetector.getLang().equals(SupportedLanguages.RUSSIAN.getValue())) {
             russianAnalizer.setLang(SupportedLanguages.RUSSIAN);
             russianAnalizer.setUrl(url);
@@ -46,13 +48,5 @@ class ParsingSet {
             greekAnalizer.sorting();
         }
         else throw new IllegalArgumentException();
-    }
-
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
     }
 }

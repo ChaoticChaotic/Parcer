@@ -3,15 +3,18 @@ package com.ChaoticChaotic.parcer.service;
 import com.ChaoticChaotic.parcer.langDetector.LangDetector;
 import com.ChaoticChaotic.parcer.reader.SiteReader;
 import com.ChaoticChaotic.parcer.ui.UI;
-import org.apache.log4j.Logger;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 
 @Component
+@Log4j @Getter @Setter
 public class ParcerServiceImpl implements ParcerService  {
 
-    private final Logger LOGGER = Logger.getLogger(ParcerService.class);
+
     private boolean isStarted = true;
 
     @Autowired
@@ -26,7 +29,7 @@ public class ParcerServiceImpl implements ParcerService  {
     @Override
     public void start() {
         while (isStarted) {
-            LOGGER.info("Начало работы");
+            log.info("Начало работы");
             ui.getInput();
             siteReader.read();
             langDetector.detect();
@@ -36,10 +39,10 @@ public class ParcerServiceImpl implements ParcerService  {
             } catch (IllegalArgumentException e) {
                 System.out.println("Язык пока не поддерживается! Введите данные повторно.");
                 System.out.println();
-                LOGGER.warn("Язык пока не поддерживается,перезапуск");
+                log.warn("Язык пока не поддерживается,перезапуск");
                 start();
             }
-            LOGGER.info("Текст обработан");
+            log.info("Текст обработан");
             setStarted(false);
             close(isStarted);
         }
@@ -55,7 +58,7 @@ public class ParcerServiceImpl implements ParcerService  {
                 } catch (IllegalArgumentException e) {
                     System.out.println("Язык пока не поддерживается! Введите данные повторно.");
                     System.out.println();
-                    LOGGER.warn("Язык пока не поддерживается,перезапуск");
+                    log.warn("Язык пока не поддерживается,перезапуск");
                     setStarted(false);
                     close(isStarted());
                 }
@@ -63,23 +66,16 @@ public class ParcerServiceImpl implements ParcerService  {
                 close(isStarted());
             }
             else if (command == 5){
-                LOGGER.info("Запрос продолжения подсчета уникальных слов");
+                log.info("Запрос продолжения подсчета уникальных слов");
                 setStarted(true);
                 start();
             }
             else
-                LOGGER.info("Запрос завершения работы");
+                log.info("Запрос завершения работы");
                 setStarted(false);
+                log.info("Завершение работы");
                 System.exit(0);
-                LOGGER.info("Завершение работы");
+
         }
-    }
-
-    public boolean isStarted() {
-        return isStarted;
-    }
-
-    public void setStarted(boolean started) {
-        isStarted = started;
     }
 }

@@ -384,3 +384,138 @@
 09-01 14:36:47 [INFO ] [.analizers.UniqueWordsAnalizer]: - Загрузка статистики в базу данных завершена
 09-01 14:36:47 [INFO ] [c.parcer.service.ParcerService]: - Текст обработан
 09-01 14:36:47 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Загрузка меню
+25-01 15:08:41 [INFO ] [rcer.service.ParcerServiceImpl]: - Начало работы
+25-01 15:08:41 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Получение URL адресa
+25-01 15:09:18 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Url адрес https://en.wikipedia.org/wiki/Reggie_Miller
+25-01 15:09:19 [INFO ] [aotic.parcer.reader.SiteReader]: - Текст с сайта https://en.wikipedia.org/wiki/Reggie_Miller прочитан
+25-01 15:09:19 [INFO ] [rcer.langDetector.LangDetector]: - Инициализация языка, язык сайта: en
+25-01 15:09:19 [INFO ] [otic.parcer.service.ParsingSet]: - Старт парсинга и подсчета статистики уникальных слов
+25-01 15:09:19 [INFO ] [.analizers.UniqueWordsAnalizer]: - Подсчет уникальных слов окончен
+25-01 15:09:19 [INFO ] [.analizers.UniqueWordsAnalizer]: - Загрузка статистики в базу данных
+25-01 15:09:20 [INFO ] [.analizers.UniqueWordsAnalizer]: - Загрузка статистики в базу данных завершена
+25-01 15:09:20 [INFO ] [rcer.service.ParcerServiceImpl]: - Текст обработан
+25-01 15:09:20 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Загрузка меню
+25-01 15:10:01 [INFO ] [rcer.service.ParcerServiceImpl]: - Запрос продолжения подсчета уникальных слов
+25-01 15:10:01 [INFO ] [rcer.service.ParcerServiceImpl]: - Начало работы
+25-01 15:10:01 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Получение URL адресa
+25-01 15:10:16 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Url адрес https://ru.wikipedia.org/wiki/%D0%9C%D0%B8%D0%BB%D0%BB%D0%B5%D1%80,_%D0%A0%D0%B5%D0%B4%D0%B6%D0%B8
+25-01 15:10:16 [INFO ] [aotic.parcer.reader.SiteReader]: - Текст с сайта https://ru.wikipedia.org/wiki/%D0%9C%D0%B8%D0%BB%D0%BB%D0%B5%D1%80,_%D0%A0%D0%B5%D0%B4%D0%B6%D0%B8 прочитан
+25-01 15:10:16 [INFO ] [rcer.langDetector.LangDetector]: - Инициализация языка, язык сайта: ru
+25-01 15:10:16 [INFO ] [otic.parcer.service.ParsingSet]: - Старт парсинга и подсчета статистики уникальных слов
+25-01 15:10:16 [INFO ] [.analizers.UniqueWordsAnalizer]: - Подсчет уникальных слов окончен
+25-01 15:10:16 [INFO ] [.analizers.UniqueWordsAnalizer]: - Загрузка статистики в базу данных
+25-01 15:10:16 [INFO ] [.analizers.UniqueWordsAnalizer]: - Загрузка статистики в базу данных завершена
+25-01 15:10:16 [INFO ] [rcer.service.ParcerServiceImpl]: - Текст обработан
+25-01 15:10:16 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Загрузка меню
+25-01 15:11:28 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Загрузка меню
+25-01 15:11:42 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Запрос вывода всех позиций базы данных по url https://ru.wikipedia.org/wiki/%D0%9C%D0%B8%D0%BB%D0%BB%D0%B5%D1%80,_%D0%A0%D0%B5%D0%B4%D0%B6%D0%B8
+25-01 15:11:42 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Загрузка меню
+25-01 15:12:28 [INFO ] [rcer.service.ParcerServiceImpl]: - Начало работы
+25-01 15:12:28 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Получение URL адресa
+25-01 15:12:32 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Url адрес https://ru.wikipedia.org/wiki/%D0%9C%D0%B8%D0%BB%D0%BB%D0%B5%D1%80,_%D0%A0%D0%B5%D0%B4%D0%B6%D0%B8
+25-01 15:12:32 [INFO ] [aotic.parcer.reader.SiteReader]: - Текст с сайта https://ru.wikipedia.org/wiki/%D0%9C%D0%B8%D0%BB%D0%BB%D0%B5%D1%80,_%D0%A0%D0%B5%D0%B4%D0%B6%D0%B8 прочитан
+25-01 15:12:32 [INFO ] [rcer.langDetector.LangDetector]: - Инициализация языка, язык сайта: ru
+25-01 15:12:32 [INFO ] [otic.parcer.service.ParsingSet]: - Старт парсинга и подсчета статистики уникальных слов
+25-01 15:12:32 [INFO ] [.analizers.UniqueWordsAnalizer]: - Подсчет уникальных слов окончен
+25-01 15:12:32 [INFO ] [.analizers.UniqueWordsAnalizer]: - Загрузка статистики в базу данных
+25-01 15:12:33 [INFO ] [.analizers.UniqueWordsAnalizer]: - Загрузка статистики в базу данных завершена
+25-01 15:12:33 [INFO ] [rcer.service.ParcerServiceImpl]: - Текст обработан
+25-01 15:12:33 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Загрузка меню
+25-01 15:12:36 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Загрузка меню
+25-01 15:12:39 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Запрос вывода всех позиций базы данных по языку
+25-01 15:12:49 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Язык запроса: ru
+25-01 15:16:03 [INFO ] [rcer.service.ParcerServiceImpl]: - Начало работы
+25-01 15:16:03 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Получение URL адресa
+25-01 15:16:09 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Url адрес https://ru.wikipedia.org/wiki/%D0%9C%D0%B8%D0%BB%D0%BB%D0%B5%D1%80,_%D0%A0%D0%B5%D0%B4%D0%B6%D0%B8
+25-01 15:16:09 [INFO ] [aotic.parcer.reader.SiteReader]: - Текст с сайта https://ru.wikipedia.org/wiki/%D0%9C%D0%B8%D0%BB%D0%BB%D0%B5%D1%80,_%D0%A0%D0%B5%D0%B4%D0%B6%D0%B8 прочитан
+25-01 15:16:09 [INFO ] [rcer.langDetector.LangDetector]: - Инициализация языка, язык сайта: ru
+25-01 15:16:09 [INFO ] [otic.parcer.service.ParsingSet]: - Старт парсинга и подсчета статистики уникальных слов
+25-01 15:16:10 [INFO ] [.analizers.UniqueWordsAnalizer]: - Подсчет уникальных слов окончен
+25-01 15:16:10 [INFO ] [.analizers.UniqueWordsAnalizer]: - Загрузка статистики в базу данных
+25-01 15:16:10 [INFO ] [.analizers.UniqueWordsAnalizer]: - Загрузка статистики в базу данных завершена
+25-01 15:16:10 [INFO ] [rcer.service.ParcerServiceImpl]: - Текст обработан
+25-01 15:16:10 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Загрузка меню
+25-01 15:16:20 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Загрузка меню
+25-01 15:26:06 [INFO ] [rcer.service.ParcerServiceImpl]: - Начало работы
+25-01 15:26:46 [INFO ] [rcer.service.ParcerServiceImpl]: - Начало работы
+25-01 15:28:00 [INFO ] [rcer.service.ParcerServiceImpl]: - Начало работы
+25-01 15:28:00 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Получение URL адресa
+25-01 15:28:09 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Url адрес https://en.wikipedia.org/wiki/Reggie_Miller
+25-01 15:28:10 [INFO ] [aotic.parcer.reader.SiteReader]: - Текст с сайта https://en.wikipedia.org/wiki/Reggie_Miller прочитан
+25-01 15:28:10 [INFO ] [rcer.langDetector.LangDetector]: - Инициализация языка, язык сайта: en
+25-01 15:28:10 [INFO ] [otic.parcer.service.ParsingSet]: - Старт парсинга и подсчета статистики уникальных слов
+25-01 15:28:10 [INFO ] [.analizers.UniqueWordsAnalizer]: - Подсчет уникальных слов окончен
+25-01 15:28:10 [INFO ] [.analizers.UniqueWordsAnalizer]: - Загрузка статистики в базу данных
+25-01 15:28:11 [INFO ] [.analizers.UniqueWordsAnalizer]: - Загрузка статистики в базу данных завершена
+25-01 15:28:11 [INFO ] [rcer.service.ParcerServiceImpl]: - Текст обработан
+25-01 15:28:11 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Загрузка меню
+25-01 15:28:17 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Загрузка меню
+25-01 15:29:44 [INFO ] [rcer.service.ParcerServiceImpl]: - Начало работы
+25-01 15:29:44 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Получение URL адресa
+25-01 15:29:53 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Url адрес https://en.wikipedia.org/wiki/Reggie_Miller
+25-01 15:29:54 [INFO ] [aotic.parcer.reader.SiteReader]: - Текст с сайта https://en.wikipedia.org/wiki/Reggie_Miller прочитан
+25-01 15:29:54 [INFO ] [rcer.langDetector.LangDetector]: - Инициализация языка, язык сайта: en
+25-01 15:29:54 [INFO ] [otic.parcer.service.ParsingSet]: - Старт парсинга и подсчета статистики уникальных слов
+25-01 15:29:54 [INFO ] [.analizers.UniqueWordsAnalizer]: - Подсчет уникальных слов окончен
+25-01 15:29:54 [INFO ] [.analizers.UniqueWordsAnalizer]: - Загрузка статистики в базу данных
+25-01 15:29:55 [INFO ] [.analizers.UniqueWordsAnalizer]: - Загрузка статистики в базу данных завершена
+25-01 15:29:55 [INFO ] [rcer.service.ParcerServiceImpl]: - Текст обработан
+25-01 15:30:09 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Загрузка меню
+25-01 15:31:32 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Загрузка меню
+25-01 15:32:05 [INFO ] [rcer.service.ParcerServiceImpl]: - Начало работы
+25-01 15:32:05 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Получение URL адресa
+25-01 15:32:18 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Url адрес https://en.wikipedia.org/wiki/Reggie_Miller
+25-01 15:32:20 [INFO ] [aotic.parcer.reader.SiteReader]: - Текст с сайта https://en.wikipedia.org/wiki/Reggie_Miller прочитан
+25-01 15:32:20 [INFO ] [rcer.langDetector.LangDetector]: - Инициализация языка, язык сайта: en
+25-01 15:32:20 [INFO ] [otic.parcer.service.ParsingSet]: - Старт парсинга и подсчета статистики уникальных слов
+25-01 15:32:20 [INFO ] [.analizers.UniqueWordsAnalizer]: - Подсчет уникальных слов окончен
+25-01 15:32:20 [INFO ] [.analizers.UniqueWordsAnalizer]: - Загрузка статистики в базу данных
+25-01 15:32:20 [INFO ] [.analizers.UniqueWordsAnalizer]: - Загрузка статистики в базу данных завершена
+25-01 15:32:20 [INFO ] [rcer.service.ParcerServiceImpl]: - Текст обработан
+25-01 15:32:28 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Загрузка меню
+25-01 15:33:09 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Загрузка меню
+25-01 15:33:50 [INFO ] [rcer.service.ParcerServiceImpl]: - Начало работы
+25-01 15:33:50 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Получение URL адресa
+25-01 15:33:54 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Url адрес https://en.wikipedia.org/wiki/Reggie_Miller
+25-01 15:33:55 [INFO ] [aotic.parcer.reader.SiteReader]: - Текст с сайта https://en.wikipedia.org/wiki/Reggie_Miller прочитан
+25-01 15:33:55 [INFO ] [rcer.langDetector.LangDetector]: - Инициализация языка, язык сайта: en
+25-01 15:33:55 [INFO ] [otic.parcer.service.ParsingSet]: - Старт парсинга и подсчета статистики уникальных слов
+25-01 15:33:55 [INFO ] [.analizers.UniqueWordsAnalizer]: - Подсчет уникальных слов окончен
+25-01 15:33:55 [INFO ] [.analizers.UniqueWordsAnalizer]: - Загрузка статистики в базу данных
+25-01 15:33:56 [INFO ] [.analizers.UniqueWordsAnalizer]: - Загрузка статистики в базу данных завершена
+25-01 15:33:56 [INFO ] [rcer.service.ParcerServiceImpl]: - Текст обработан
+25-01 15:33:56 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Загрузка меню
+25-01 15:34:03 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Запрос вывода всех позиций базы данных
+25-01 15:34:03 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Загрузка меню
+25-01 15:34:16 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Запрос вывода всех позиций базы данных по слову реджи
+25-01 15:34:16 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Загрузка меню
+25-01 15:35:01 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Запрос вывода всех позиций базы данных по url https://en.wikipedia.org/wiki/Reggie_Miller
+25-01 15:35:01 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Загрузка меню
+25-01 15:35:24 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Запрос вывода всех позиций базы данных по языку
+25-01 15:35:27 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Язык запроса: ru
+25-01 15:36:29 [INFO ] [rcer.service.ParcerServiceImpl]: - Начало работы
+25-01 15:36:29 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Получение URL адресa
+25-01 15:36:32 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Url адрес https://en.wikipedia.org/wiki/Reggie_Miller
+25-01 15:36:33 [INFO ] [aotic.parcer.reader.SiteReader]: - Текст с сайта https://en.wikipedia.org/wiki/Reggie_Miller прочитан
+25-01 15:36:33 [INFO ] [rcer.langDetector.LangDetector]: - Инициализация языка, язык сайта: en
+25-01 15:36:33 [INFO ] [otic.parcer.service.ParsingSet]: - Старт парсинга и подсчета статистики уникальных слов
+25-01 15:36:33 [INFO ] [.analizers.UniqueWordsAnalizer]: - Подсчет уникальных слов окончен
+25-01 15:36:33 [INFO ] [.analizers.UniqueWordsAnalizer]: - Загрузка статистики в базу данных
+25-01 15:36:33 [INFO ] [.analizers.UniqueWordsAnalizer]: - Загрузка статистики в базу данных завершена
+25-01 15:36:33 [INFO ] [rcer.service.ParcerServiceImpl]: - Текст обработан
+25-01 15:36:33 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Загрузка меню
+25-01 15:36:36 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Запрос вывода всех позиций базы данных по языку
+25-01 15:36:40 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Язык запроса: en
+25-01 15:36:51 [INFO ] [rcer.service.ParcerServiceImpl]: - Начало работы
+25-01 15:36:51 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Получение URL адресa
+25-01 15:36:54 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Url адрес https://en.wikipedia.org/wiki/Reggie_Miller
+25-01 15:36:55 [INFO ] [aotic.parcer.reader.SiteReader]: - Текст с сайта https://en.wikipedia.org/wiki/Reggie_Miller прочитан
+25-01 15:36:55 [INFO ] [rcer.langDetector.LangDetector]: - Инициализация языка, язык сайта: en
+25-01 15:36:55 [INFO ] [otic.parcer.service.ParsingSet]: - Старт парсинга и подсчета статистики уникальных слов
+25-01 15:36:55 [INFO ] [.analizers.UniqueWordsAnalizer]: - Подсчет уникальных слов окончен
+25-01 15:36:55 [INFO ] [.analizers.UniqueWordsAnalizer]: - Загрузка статистики в базу данных
+25-01 15:36:55 [INFO ] [.analizers.UniqueWordsAnalizer]: - Загрузка статистики в базу данных завершена
+25-01 15:36:55 [INFO ] [rcer.service.ParcerServiceImpl]: - Текст обработан
+25-01 15:36:55 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Загрузка меню
+25-01 15:37:20 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Запрос вывода всех позиций базы данных по слову COACHES
+25-01 15:37:21 [INFO ] [om.ChaoticChaotic.parcer.ui.UI]: - Загрузка меню

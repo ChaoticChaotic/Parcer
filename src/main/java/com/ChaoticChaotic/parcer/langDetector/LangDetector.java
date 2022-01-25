@@ -4,14 +4,17 @@ import com.ChaoticChaotic.parcer.reader.SiteReader;
 import com.cybozu.labs.langdetect.Detector;
 import com.cybozu.labs.langdetect.DetectorFactory;
 import com.cybozu.labs.langdetect.LangDetectException;
-import org.apache.log4j.Logger;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
+@Log4j @Getter @Setter
 public class LangDetector {
 
-    Logger LOGGER = Logger.getLogger(LangDetector.class);
+
     private final String PROFILE_DIRECTORY = "profiles";
     private String lang;
     private String rawString;
@@ -30,25 +33,8 @@ public class LangDetector {
             detector.append(rawString);
             setLang(detector.detect());
         } catch (LangDetectException e) {
-        LOGGER.error("Ошибка! Ошибка при попытке определения языка " + e);
+        log.error("Ошибка! Ошибка при попытке определения языка " + e);
         }
-        LOGGER.info("Инициализация языка, язык сайта: " + getLang());
-    }
-
-
-    public String getLang() {
-        return lang;
-    }
-
-    public void setLang(String lang) {
-        this.lang = lang;
-    }
-
-    public String getRawString() {
-        return rawString;
-    }
-
-    public void setRawString(String rawString) {
-        this.rawString = rawString;
+        log.info("Инициализация языка, язык сайта: " + getLang());
     }
 }

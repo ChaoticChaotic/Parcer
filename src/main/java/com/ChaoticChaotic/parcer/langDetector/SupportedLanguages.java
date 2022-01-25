@@ -1,7 +1,10 @@
 package com.ChaoticChaotic.parcer.langDetector;
 
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 
+@Getter @AllArgsConstructor
 public enum SupportedLanguages {
 
     RUSSIAN("ru"),
@@ -9,13 +12,4 @@ public enum SupportedLanguages {
     GREEK("el");
 
     private String value;
-
-    SupportedLanguages(String value) {
-        this.value = value;
-    }
-
-    public String getValue() {
-        return value;
-    }
-
 }

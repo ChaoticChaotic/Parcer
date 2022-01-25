@@ -4,6 +4,9 @@ package com.ChaoticChaotic.parcer.analizers;
 import com.ChaoticChaotic.parcer.entity.Word;
 import com.ChaoticChaotic.parcer.langDetector.SupportedLanguages;
 import com.ChaoticChaotic.parcer.wordsDAO.WordsDAO;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.extern.log4j.Log4j;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -15,10 +18,10 @@ import java.util.Map;
 
 import static java.util.stream.Collectors.toMap;
 
-
+@Log4j @Getter @Setter
 public class UniqueWordsAnalizer {
 
-        private Logger LOGGER = Logger.getLogger(UniqueWordsAnalizer.class);
+
         private String rawString;
         private String[] parsedString;
         private LinkedHashMap<String,Integer> sortedString;
@@ -44,8 +47,8 @@ public class UniqueWordsAnalizer {
                     .collect(
                             toMap(Map.Entry::getKey,Map.Entry::getValue, (e1,e2) -> e2,LinkedHashMap::new)
                     );
-            LOGGER.info("Подсчет уникальных слов окончен");
-            LOGGER.info("Загрузка статистики в базу данных");
+            log.info("Подсчет уникальных слов окончен");
+            log.info("Загрузка статистики в базу данных");
             for (String s: sortedString.keySet()) {
                 if (s.length() > 3 && sortedString.get(s) > 2) {
                     Word word = new Word();
@@ -57,45 +60,7 @@ public class UniqueWordsAnalizer {
                     System.out.println(word);
                 }
             }
-            LOGGER.info("Загрузка статистики в базу данных завершена");
-        }
-
-        public String getRawString() { return rawString; }
-
-        public void setRawString(String rawString) {
-            this.rawString = rawString;
-        }
-
-        public String[] getParsedString() {
-            return parsedString;
-        }
-
-        public void setParsedString(String[] parsedString) {
-            this.parsedString = parsedString;
-        }
-
-        public LinkedHashMap<String,Integer> getSortedString() {
-            return sortedString;
-        }
-
-        public void setSortedString(LinkedHashMap<String,Integer> sortedString) {
-            this.sortedString = sortedString;
-        }
-
-        public String getUrl() {
-        return url;
-        }
-
-        public void setUrl(String url) {
-        this.url = url;
-        }
-
-        public SupportedLanguages getLang() {
-        return lang;
-        }
-
-        public void setLang(SupportedLanguages lang) {
-        this.lang = lang;
+            log.info("Загрузка статистики в базу данных завершена");
         }
 }
 
