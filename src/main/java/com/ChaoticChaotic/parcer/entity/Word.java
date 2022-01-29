@@ -28,6 +28,5 @@ public class Word {
     @Enumerated(EnumType.STRING)
     @Column(name = "language", nullable = false)
     private SupportedLanguages language;
-
-
+    
 }
