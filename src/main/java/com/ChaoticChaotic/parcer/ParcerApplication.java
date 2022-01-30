@@ -1,6 +1,6 @@
 package com.ChaoticChaotic.parcer;
 
-import com.ChaoticChaotic.parcer.service.ParcerService;
+import com.ChaoticChaotic.parcer.service.ParserService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,9 +15,9 @@ public class ParcerApplication {
 	}
 
 	@Bean
-	CommandLineRunner commandLineRunner(ParcerService parcerService) {
+	CommandLineRunner commandLineRunner(ParserService parserService) {
 		return args -> {
-			parcerService.start();
+			parserService.start();
 		};
 
 	}

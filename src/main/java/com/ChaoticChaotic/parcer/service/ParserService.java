@@ -1,6 +1,6 @@
 package com.ChaoticChaotic.parcer.service;
 
-public interface ParcerService {
+public interface ParserService {
     void start();
     void close(Boolean isStarted);
 

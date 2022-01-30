@@ -12,5 +12,4 @@ public interface WordsDAO {
     List<Word> findAll();
     List<Word> findAllByValue(String value);
     List<Word> findAllByUrl(String urlAddress);
-    List<Word> findAllByLanguage(SupportedLanguages language);
 }

@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Log4j @Getter @Setter
-public class ParcerServiceImpl implements ParcerService  {
+public class ParserServiceImpl implements ParserService {
 
 
     private boolean isStarted = true;
@@ -31,7 +31,7 @@ public class ParcerServiceImpl implements ParcerService  {
         while (isStarted) {
             log.info("Начало работы");
             ui.getInput();
-            siteReader.read();
+            siteReader.read(ui.getUrl());
             langDetector.detect();
             parsingSetter.setUrl(ui.getUrl());
             try {
@@ -52,20 +52,10 @@ public class ParcerServiceImpl implements ParcerService  {
     public void close(Boolean isStarted) {
         if (!isStarted) {
             Integer command = ui.getCommand();
-            if (command <= 4){
-                try {
-                    ui.commandHandler(command);
-                } catch (IllegalArgumentException e) {
-                    System.out.println("Язык пока не поддерживается! Введите данные повторно.");
-                    System.out.println();
-                    log.warn("Язык пока не поддерживается,перезапуск");
-                    setStarted(false);
-                    close(isStarted());
-                }
-                setStarted(false);
-                close(isStarted());
+            if (command <= 3){
+                ui.commandHandler(command);
             }
-            else if (command == 5){
+            else if (command == 4){
                 log.info("Запрос продолжения подсчета уникальных слов");
                 setStarted(true);
                 start();

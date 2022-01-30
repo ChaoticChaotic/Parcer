@@ -1,6 +1,8 @@
 package com.ChaoticChaotic.parcer.reader;
 
 
+import com.ChaoticChaotic.parcer.service.ParserService;
+import com.ChaoticChaotic.parcer.service.ParserServiceImpl;
 import com.ChaoticChaotic.parcer.ui.UI;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -21,13 +23,12 @@ public class SiteReader{
     private String defReferrer = "http://www.google.com";
     private String rawString;
 
-    @Autowired
-    UI ui;
+    ParserServiceImpl parserService;
 
 
-    public void read() {
+    public void read(String url) {
         try {
-            rawString = Jsoup.connect(ui.getUrl())
+            rawString = Jsoup.connect(url)
                     .userAgent(defAgent)
                     .referrer(defReferrer)
                     .get().text();
@@ -35,14 +36,14 @@ public class SiteReader{
             log.warn("Ошибка входящего потока, перезапуск " + e);
             System.out.println("Ошибка входящего потока, перезапуск");
             System.out.println();
-
+            parserService.start();
         } catch (IllegalArgumentException e) {
             log.warn("Некорректный формат адреса, перезапуск " + e);
             System.out.println("Некорректный формат адреса, перезапуск");
             System.out.println();
-
+            parserService.start();
         }
-        log.info("Текст с сайта " + ui.getUrl() +  " прочитан");
+        log.info("Текст с сайта " + url +  " прочитан");
     }
 
     public SiteReader(String defAgent, String defReferrer) {

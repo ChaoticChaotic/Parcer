@@ -1,5 +1,6 @@
 package com.ChaoticChaotic.parcer.ui;
 
+import com.ChaoticChaotic.parcer.entity.Word;
 import com.ChaoticChaotic.parcer.wrappers.InputScanner;
 import com.ChaoticChaotic.parcer.langDetector.SupportedLanguages;
 import com.ChaoticChaotic.parcer.wordsDAO.WordsDAO;
@@ -32,9 +33,9 @@ public class UI {
         url = scanner.getLine();
         if (getUrl().equals(" ") || getUrl().equals("") || getUrl() == null) {
             try {
-                throw new IllegalArgumentException("Пустой URL адрес");
+                throw new IllegalArgumentException();
             } catch (IllegalArgumentException e) {
-                System.out.println(e);
+                System.out.println("Пустой URL адрес");
                 System.out.println();
                 log.error("Ошибка! Пустой URL адрес " + e);
                 getInput();
@@ -54,20 +55,18 @@ public class UI {
                         "\n" +
                         "3. показать записи для введенного адреса" +
                         "\n" +
-                        "4. показать записи для введенного языка" +
+                        "4. для продолжения парсинга" +
                         "\n" +
-                        "5. для продолжения парсинга" +
-                        "\n" +
-                        "6. для завершения работы"
+                        "5. для завершения работы"
         );
         System.out.println();
         command = Integer.valueOf(scanner.getLine());
         if (command <= 0 || command > 6 || command == null) {
             try {
-                throw new IllegalArgumentException("Неподходящий формат или отсутствующая команда");
+                throw new IllegalArgumentException();
             } catch (IllegalArgumentException e) {
                 log.error("Неподходящий формат или отсутствующая команда");
-                System.out.println(e);
+                System.out.println("Неподходящий формат или отсутствующая команда");
                 getCommand();
             }
         }
@@ -77,7 +76,9 @@ public class UI {
     public void commandHandler(Integer command) throws IllegalArgumentException {
         if (command == 1){
             log.info("Запрос вывода всех позиций базы данных");
-            System.out.println(wordsDAO.findAll());
+            for (Word word: wordsDAO.findAll()){
+                System.out.println(word);
+            }
         }
         else if (command == 2){
             System.out.println("введите слово для поиска");
@@ -91,28 +92,11 @@ public class UI {
             System.out.println();
             String url = scanner.getLine();
             log.info("Запрос вывода всех позиций базы данных по url " + url);
-            System.out.println(wordsDAO.findAllByUrl(url));
+            for (Word word: wordsDAO.findAll()){
+                System.out.println(word);
+            }
         }
-        else if (command == 4){
-            log.info("Запрос вывода всех позиций базы данных по языку");
-            System.out.println("введите язык для поиска: en, ru, el ?");
-            System.out.println();
-            String lang = scanner.getLine();
-            if (lang.equals(SupportedLanguages.RUSSIAN.getValue())){
-                log.info("Язык запроса: ru");
-                System.out.println(wordsDAO.findAllByLanguage(SupportedLanguages.RUSSIAN));
-            }
-            else if (lang.equals(SupportedLanguages.ENGLISH.getValue())){
-                log.info("Язык запроса: en");
-                System.out.println(wordsDAO.findAllByLanguage(SupportedLanguages.ENGLISH));
-            }
-            else if (lang.equals(SupportedLanguages.GREEK.getValue())){
-                log.info("Язык запроса: el");
-                System.out.println(wordsDAO.findAllByLanguage(SupportedLanguages.GREEK));
-            }
             else throw new IllegalArgumentException();
         }
-
-    }
 
 }
