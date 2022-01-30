@@ -8,10 +8,10 @@ import org.springframework.context.annotation.Bean;
 
 
 @SpringBootApplication
-public class ParcerApplication {
+public class ParserApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ParcerApplication.class, args);
+		SpringApplication.run(ParserApplication.class, args);
 	}
 
 	@Bean
